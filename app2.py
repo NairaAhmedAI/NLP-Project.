@@ -3,10 +3,10 @@ import pickle
 import numpy as np
 
 # Load the saved Logistic Regression model and TF-IDF vectorizer
-with open("logistic_regression_model.pkl1", "rb") as f:
+with open("final_logistic_regression.pkl", "rb") as f:
     svm = pickle.load(f)
 
-with open("tfidf_vectorizer.pkl1", "rb") as f:
+with open("final_tfidf_vectorizer.pkl", "rb") as f:
     tfidf = pickle.load(f)
 
 # Set up Streamlit page
@@ -82,4 +82,5 @@ if st.button("Analyze Sentiment"):
             st.error("😒 Sentiment: Negative")
         else:
             st.info("😐 Sentiment: Neutral")
+
 
